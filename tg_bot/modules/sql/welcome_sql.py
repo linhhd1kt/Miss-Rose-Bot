@@ -15,10 +15,10 @@ class Welcome(BASE):
     should_welcome = Column(Boolean, default=True)
     should_goodbye = Column(Boolean, default=True)
 
-    custom_welcome = Column(UnicodeText, default=DEFAULT_WELCOME)
+    custom_welcome = Column(String(255), default=DEFAULT_WELCOME)
     welcome_type = Column(Integer, default=Types.TEXT.value)
 
-    custom_leave = Column(UnicodeText, default=DEFAULT_GOODBYE)
+    custom_leave = Column(String(255), default=DEFAULT_GOODBYE)
     leave_type = Column(Integer, default=Types.TEXT.value)
 
     clean_welcome = Column(BigInteger)
@@ -38,8 +38,8 @@ class WelcomeButtons(BASE):
     __tablename__ = "welcome_urls"
     id = Column(Integer, primary_key=True, autoincrement=True)
     chat_id = Column(String(14), primary_key=True)
-    name = Column(UnicodeText, nullable=False)
-    url = Column(UnicodeText, nullable=False)
+    name = Column(String(255), nullable=False)
+    url = Column(String(255), nullable=False)
     same_line = Column(Boolean, default=False)
 
     def __init__(self, chat_id, name, url, same_line=False):
@@ -53,8 +53,8 @@ class GoodbyeButtons(BASE):
     __tablename__ = "leave_urls"
     id = Column(Integer, primary_key=True, autoincrement=True)
     chat_id = Column(String(14), primary_key=True)
-    name = Column(UnicodeText, nullable=False)
-    url = Column(UnicodeText, nullable=False)
+    name = Column(String(255), nullable=False)
+    url = Column(String(255), nullable=False)
     same_line = Column(Boolean, default=False)
 
     def __init__(self, chat_id, name, url, same_line=False):

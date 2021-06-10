@@ -10,8 +10,8 @@ from tg_bot.modules.sql import SESSION, BASE
 class Notes(BASE):
     __tablename__ = "notes"
     chat_id = Column(String(14), primary_key=True)
-    name = Column(UnicodeText, primary_key=True)
-    value = Column(UnicodeText, nullable=False)
+    name = Column(String(255), primary_key=True)
+    value = Column(String(255), nullable=False)
     file = Column(UnicodeText)
     is_reply = Column(Boolean, default=False)
     has_buttons = Column(Boolean, default=False)
@@ -32,9 +32,9 @@ class Buttons(BASE):
     __tablename__ = "note_urls"
     id = Column(Integer, primary_key=True, autoincrement=True)
     chat_id = Column(String(14), primary_key=True)
-    note_name = Column(UnicodeText, primary_key=True)
-    name = Column(UnicodeText, nullable=False)
-    url = Column(UnicodeText, nullable=False)
+    note_name = Column(String(255), primary_key=True)
+    name = Column(String(255), nullable=False)
+    url = Column(String(255), nullable=False)
     same_line = Column(Boolean, default=False)
 
     def __init__(self, chat_id, note_name, name, url, same_line=False):

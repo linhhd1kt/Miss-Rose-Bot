@@ -8,7 +8,7 @@ from tg_bot.modules.sql import BASE, SESSION
 class RSS(BASE):
     __tablename__ = "rss_feed"
     id = Column(Integer, primary_key=True)
-    chat_id = Column(UnicodeText, nullable=False)
+    chat_id = Column(String(255), nullable=False)
     feed_link = Column(UnicodeText)
     old_entry_link = Column(UnicodeText)
 

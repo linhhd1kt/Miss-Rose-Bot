@@ -8,7 +8,7 @@ from tg_bot.modules.sql import BASE, SESSION
 class GloballyMutedUsers(BASE):
     __tablename__ = "gmutes"
     user_id = Column(Integer, primary_key=True)
-    name = Column(UnicodeText, nullable=False)
+    name = Column(String(255), nullable=False)
     reason = Column(UnicodeText)
 
     def __init__(self, user_id, name, reason=None):
