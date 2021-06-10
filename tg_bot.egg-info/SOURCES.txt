@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+tg_bot/__init__.py
+tg_bot/__main__.py
+tg_bot/config.py
+tg_bot.egg-info/PKG-INFO
+tg_bot.egg-info/SOURCES.txt
+tg_bot.egg-info/dependency_links.txt
+tg_bot.egg-info/not-zip-safe
+tg_bot.egg-info/top_level.txt
