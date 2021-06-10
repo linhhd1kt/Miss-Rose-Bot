@@ -16,7 +16,7 @@ class Config(object):
 
     # RECOMMENDED
     # SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:root@localhost/tgbot'  # needed for any database modules
-    SQLALCHEMY_DATABASE_URI = 'postgresql://root:root@localhost/tgbot'
+    SQLALCHEMY_DATABASE_URI = 'postgresql://postgres:postgres@localhost/chatbot'
     MESSAGE_DUMP = None  # needed to make sure 'save from' messages persist
     LOAD = []
     NO_LOAD = ['translation', 'rss']
