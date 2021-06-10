@@ -8,7 +8,7 @@ from tg_bot.modules.sql import SESSION, BASE
 class BlackListFilters(BASE):
     __tablename__ = "blacklist"
     chat_id = Column(String(14), primary_key=True)
-    trigger = Column(UnicodeText, primary_key=True, nullable=False)
+    trigger = Column(String(255), primary_key=True, nullable=False)
 
     def __init__(self, chat_id, trigger):
         self.chat_id = str(chat_id)  # ensure string
